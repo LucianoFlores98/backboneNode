@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.possumus.tech/skeletons/nodejs/nodejs-skeleton.git"
+    "url": "https://github.com/LucianoFlores98/backboneNode"
   },
   "keywords": [
     "clean-code"
