@@ -8,14 +8,11 @@ At the root of the project folder, you should run `npm install` or `npm i`.
 
 ## Prerequisites
 
-First at all, you need to install mysql server to run this project correctly.
-
-- For windows we used xampp.
-- For mac we installed mysql from homebrew and then run the command `brew services start mysql`
+First at all, you need to install postgresql to run this project correctly.
 
 After that, you need to do two important things:
 
-- 1: Create a database in the mysql client. It's too important to use the same name that you wrote in the environment file.
+- 1: Create a database in the postgres client. It's too important to use the same name that you wrote in the environment file.
 - 2: execute the migration scripts that is on the package.json file:
   -- `npm run migrations:init`: To create an empty project. This will create following folders: config, models, migrations, seeders
   -- `npm run migrations:run`: Run the migrations
@@ -68,8 +65,6 @@ For dependency injection we create a custom implementation using Context library
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
-    "mocha": "^10.7.3",
-    "mongo-migrate-ts": "^1.6.2",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.11.3",

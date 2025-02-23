@@ -32,9 +32,16 @@ export const LoginUserAction = (
 
           if (!isPasswordValid) throw new WrongPasswordException();
 
+          const responseUser = {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+          }
+
           const token = await generateJWT(user.id);
           resolve({
-            user,
+            responseUser,
             token,
           });
         } catch (error) {
