@@ -4,6 +4,7 @@ import { IUserRepository } from "../../core/repository/IUserRepository";
 import { IHashService } from "../../core/services/IHashService";
 import { UserControllers } from "./UserControllers";
 
+// Debemos registrar todos los controladores, servicios, acciones y repositorios que estemos utilizando en este modulo
 export const getUserControllers = (dependencyManager: DependencyManager) => {
   const UserRepository = getUserRepository(dependencyManager);
   const hashService = getHashService(dependencyManager);

@@ -8,6 +8,7 @@ import { UserNotExistException } from "../../core/exceptions/UserNotExistExcepti
 import { WrongEmailException } from "../../core/exceptions/WrongEmailException";
 const name = "Usuario";
 const pronoun = "o";
+// Definimos los métodos(acciones) que definimos de los usuarios a traves de la dependencia dependencyManager
 export const UserControllers = ({
   save,
   edit,
@@ -17,6 +18,7 @@ export const UserControllers = ({
   getOne,
   login,
 }: IUserActions) => {
+  //mapeo de errores
   const errorResponses = createHashMap(
     {
       [UserNotExistException.name]: (res: Response, error: Error) =>
